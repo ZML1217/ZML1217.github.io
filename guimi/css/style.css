@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+html{
+    background:linear-gradient(#ff0 0%,#000 80%);
+    height: 100%;	
+    background-size:cover;  /* 让背景图基于容器大小伸缩 */
+   background-attachment:fixed; 
+    }
+
+
+h1 {
+  position: absolute;
+  left: 15%;
+  top: 30%;
+}
+.box {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  margin: 300px auto;
+  transform-style: preserve-3d;
+  transform: rotateX(13deg);
+  animation: move 15s linear infinite;
+}
+
+.maxbox {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 50px;
+  top: 0;
+  transform-style: preserve-3d;
+}
+.maxbox li {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border: 1px solid #ccc;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.2;
+  transition: all 1s ease;
+}
+
+.minbox {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 100px;
+  top: 60px;
+  transform-style: preserve-3d;
+}
+
+.minbox li {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.minbox li:nth-child(1) {
+  background: url(../img/01.jpg) no-repeat 0 0;
+  background-size: cover;
+  transform: translateZ(100px);
+}
+.minbox li:nth-child(2) {
+  background: url(../img/02.jpg) no-repeat 0 0;
+  background-size: cover;
+  transform: rotateX(180deg) translateZ(100px);
+}
+.minbox li:nth-child(3) {
+  background: url(../img/03.jpg) no-repeat 0 0;
+  background-size: cover;
+  transform: rotateX(-90deg) translateZ(100px);
+}
+.minbox li:nth-child(4) {
+  background: url(../img/04.jpg) no-repeat 0 0;
+  background-size: cover;
+  transform: rotateX(90deg) translateZ(100px);
+}
+.minbox li:nth-child(5) {
+  background: url(../img/05.jpg) no-repeat 0 0;
+  background-size: cover;
+  transform: rotateY(90deg) translateZ(100px);
+}
+.minbox li:nth-child(6) {
+  background: url(../img/06.jpg) no-repeat 0 0;
+  background-size: cover;
+  transform: rotateY(-90deg) translateZ(100px);
+}
+
+.maxbox li:nth-child(1) {
+  background: url(../img/07.jpg) no-repeat 0 0;
+  background-size: cover;
+  transform: translateZ(150px);
+}
+.maxbox li:nth-child(2) {
+  background: url(../img/08.jpg) no-repeat 0 0;
+  background-size: cover;
+  transform: rotateX(180deg) translateZ(150px);
+}
+.maxbox li:nth-child(3) {
+  background: url(../img/09.jpg) no-repeat 0 0;
+  background-size: cover;
+  transform: rotateX(-90deg) translateZ(150px);
+}
+.maxbox li:nth-child(4) {
+  background: url(../img/10.jpg) no-repeat 0 0;
+  background-size: cover;
+  transform: rotateX(90deg) translateZ(150px);
+}
+.maxbox li:nth-child(5) {
+  background: url(../img/11.jpg) no-repeat 0 0;
+  background-size: cover;
+  transform: rotateY(-90deg) translateZ(150px);
+}
+.maxbox li:nth-child(6) {
+  background: url(../img/12.jpg) no-repeat 0 0;
+  background-size: cover;
+  transform: rotateY(90deg) translateZ(150px);
+}
+/* 鼠标放上去过后的动画 */
+.box:hover ol li:nth-child(1) {
+  transform: translateZ(400px);
+  width: 500px;
+  height: 500px;
+  opacity: 0.8;
+  left: -125px;
+  top: -125px;
+}
+.box:hover ol li:nth-child(2) {
+  transform: rotateX(180deg) translateZ(400px);
+  width: 500px;
+  height: 500px;
+  opacity: 0.8;
+  left: -125px;
+  top: -125px;
+}
+.box:hover ol li:nth-child(3) {
+  transform: rotateX(-90deg) translateZ(400px);
+  width: 500px;
+  height: 500px;
+  opacity: 0.8;
+  left: -125px;
+  top: -125px;
+}
+.box:hover ol li:nth-child(4) {
+  transform: rotateX(90deg) translateZ(400px);
+  width: 500px;
+  height: 500px;
+  opacity: 0.8;
+  left: -125px;
+  top: -125px;
+}
+.box:hover ol li:nth-child(5) {
+  transform: rotateY(-90deg) translateZ(400px);
+  width: 500px;
+  height: 500px;
+  opacity: 0.8;
+  left: -125px;
+  top: -125px;
+}
+.box:hover ol li:nth-child(6) {
+  transform: rotateY(90deg) translateZ(400px);
+  width: 500px;
+  height: 500px;
+  opacity: 0.8;
+  left: -125px;
+  top: -125px;
+}
+
+@keyframes move {
+  0% {
+    -webkit-transform: rotateX(13deg) rotateY(0deg);
+  }
+  70% {
+    -webkit-transform: rotateX(13deg) rotateY(315deg);
+  }
+  90% {
+    -webkit-transform: rotateX(-347deg) rotateY(315deg);
+  }
+  100% {
+    -webkit-transform: rotateX(-347deg) rotateY(360deg);
+  }
+}
